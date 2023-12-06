@@ -1,5 +1,6 @@
 const express = require('express');
 
+require('../src/DB/conn')
 const app = express();
 
 app.get("/",async (request,response)=>{
