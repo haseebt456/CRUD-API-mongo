@@ -11,4 +11,10 @@ const productSchema = new mongoose.Schema({
     stock:{
         type:Number
     }
-})
+});
+
+//we are creating a new collection
+
+const Products = new mongoose.model("Products",productSchema);
+
+module.exports = Products;
