@@ -28,6 +28,16 @@ app.get("/Products",async (req,res)=>{
         res.status(400).send(e);
     }
 });
+app.get("/Products/:id",async (req,res)=>{
+    try{
+        const _id = req.params.id;
+        const getProduct = await Products.findById({_id});
+        res.send(getProduct);
+    }
+    catch(e){
+        res.status(400).send(e);
+    }
+});
 
 app.listen(port,()=>{
     console.log(`Connection is live at pont no. ${port}`)
