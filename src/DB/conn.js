@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://mhaseebtufail:ezcV21otwVMTNNJI@cluster.ocwdiqu.mongodb.net/Tasks?retryWrites=true&w=majority")
+mongoose.connect("mongodb://127.0.0.1:27017/Database")
 .then(()=>{
     console.log("Connection sucessful");
 }).catch((error)=>{
