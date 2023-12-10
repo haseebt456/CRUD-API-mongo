@@ -38,6 +38,18 @@ app.get("/Products/:id",async (req,res)=>{
         res.status(400).send(e);
     }
 });
+app.patch("/Products/:id",async (req,res)=>{
+    try{
+        const _id = req.params.id;
+        const updProduct = await Products.findByIdAndUpdate (_id,req.body,{
+            new:true//for returning updated data
+        });
+        res.send(updProduct);
+    }
+    catch(e){
+        res.status(400).send(e);
+    }
+});
 
 app.listen(port,()=>{
     console.log(`Connection is live at pont no. ${port}`)
