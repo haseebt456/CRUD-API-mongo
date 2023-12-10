@@ -47,7 +47,17 @@ app.patch("/Products/:id",async (req,res)=>{
         res.send(updProduct);
     }
     catch(e){
-        res.status(400).send(e);
+        res.status(500).send(e);
+    }
+});
+app.delete("/Products/:id",async (req,res)=>{
+    try{
+        const _id = req.params.id;
+        const delProduct = await Products.findByIdAndDelete(_id);
+        res.send(delProduct);
+    }
+    catch(e){
+        res.status(500).send(e);
     }
 });
 
