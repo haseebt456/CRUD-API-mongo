@@ -12,10 +12,10 @@ app.post("/Products",async (req,res)=>{
         const addingProducts = new Products(req.body);
         console.log(req.body);
         const insert = await addingProducts.save();
-        res.send(insert);
+        res.status(201).send(insert);
     }
     catch(e){
-        res.send(e);
+        res.status(400).send(e);
     }
 })
 
