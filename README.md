@@ -18,6 +18,7 @@ To add a new product, send a POST request to the following endpoint:
 
 ```bash
 POST /Products
+```
 
 ### 2. Read Products
 
@@ -25,11 +26,13 @@ To retrieve a list of all products, send a GET request to the following endpoint
 
 ```bash
 GET /Products
+```
 
 To retrieve information about a specific product, send a GET request to:
 
 ```bash
 GET /Products/:productsId
+```
 
 ### 3. Update a Products
 
@@ -38,12 +41,16 @@ To update the details of a product, send a PUT request to the following endpoint
 ```bash
 PUT /Products/:productId
 
+```
+
 ### 4. Delete a Products
 
 To delete a product, send a DELETE request to the following endpoint:
 
 ```bash
 DELETE /Products/:productId
+
+```
 
 ## Installation
 
@@ -53,14 +60,19 @@ After cloning the repository, you need to create a file called ".env" in the roo
 
 ```bash
 CONNURL=mongodb://localhost:27017
+
+```
 ```bash
 PORT=3000
 
+```
 
 #### Install dependencies:
 
 ```bash
 npm install
+
+```
 
 
 ## Usage
@@ -69,11 +81,15 @@ To use the API, you need to have MongoDB installed on your computer. Finally, yo
 ```bash
 MONGODB_URI=mongodb://localhost:27017
 
+```
+
 #### Start the server:
 To start the API, you need to run the following command:
 
 ```bash
 npm run dev
+
+```
 
 Now, the API should be running locally on http://localhost:3000.
 
