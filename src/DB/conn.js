@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const mongoConnectionURL = process.env.MONGO_URL;
 
-mongoose.connect("mongodb+srv://mhaseebtufail:haseeb123@cluster.ocwdiqu.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoConnectionURL,{ useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     console.log("Connection sucessful");
 }).catch((error)=>{
